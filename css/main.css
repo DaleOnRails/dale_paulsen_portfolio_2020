@@ -168,6 +168,8 @@ main {
       transition: all 0.5s ease-out; }
       main .icons a:hover {
         color: #eece1a; }
+  main .ca-link:hover {
+    color: #fff; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -194,22 +196,38 @@ main {
     border: #eece1a 3px solid; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.5rem; }
+    font-size: 1rem; }
+  .about-info .about-me-link:hover {
+    color: #eece1a; }
   .about-info [class^="flaticon-"]:before, .about-info [class*=" flaticon-"]:before, .about-info [class^="flaticon-"]:after, .about-info [class*=" flaticon-"]:after {
     -webkit-text-stroke: 0.3px white;
     padding-left: 2px; }
   .about-info .skill1 {
     grid-area: skill1; }
     .about-info .skill1 h3 {
-      color: #eece1a; }
+      color: #eece1a;
+      text-align: center; }
     .about-info .skill1 i {
       color: white; }
+    .about-info .skill1 ul {
+      list-style: none;
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      align-content: center; }
+    .about-info .skill1 .current-skills, .about-info .skill1 .current-tools {
+      padding-bottom: 3px;
+      list-style: none;
+      align-content: center; }
   .about-info .skill2 {
     grid-area: skill2; }
     .about-info .skill2 h3 {
-      color: #eece1a; }
+      color: #eece1a;
+      text-align: center; }
     .about-info .skill2 i {
       color: white; }
+    .about-info .skill2 .seo-skills {
+      font-size: medium; }
   .about-info .skill3 {
     grid-area: skill3; }
     .about-info .skill3 h3 {
@@ -268,7 +286,7 @@ main {
   max-width: 700px; }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption, #caption2, #caption3, #caption4, #caption5 {
+.projectinfo1, .projectinfo2, .projectinfo3, .projectinfo4, .projectinfo5 {
   margin: auto;
   display: block;
   width: 80%;
@@ -408,8 +426,19 @@ main {
       width: auto;
       border: solid 2px #eece1a; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'skill1' 'skill2' 'skill3';
+    grid-template-areas: "bioimage" "bio" "skill1" "skill2" "skill3";
     grid-template-columns: 1fr; }
+  .skill1 ul {
+    list-style: none;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    align-content: center; }
+  .skill1 .current-skills,
+  .skill1 .current-tools {
+    padding-bottom: 3px;
+    list-style: none;
+    align-content: center; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
@@ -421,5 +450,16 @@ main {
     main .lg-heading {
       margin-top: 1rem;
       font-size: 5rem; }
+  .skill1 ul {
+    list-style: none;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    align-content: center; }
+  .skill1 .current-skills,
+  .skill1 .current-tools {
+    padding-bottom: 3px;
+    list-style: none;
+    align-content: center; }
   .projects {
     grid-template-columns: 1fr; } }
