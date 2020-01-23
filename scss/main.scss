@@ -1,0 +1,334 @@
+@import 'config';
+@import 'menu';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include background;
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+// Headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font-size: 6rem;
+  }
+
+  &.sm-heading {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+    font-family: 'Roboto Slab', serif;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px);
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+      @include easeOut;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 15vh;
+    }
+  }
+}
+
+.welcome-header {
+  font-family: 'Roboto Slab', serif;
+}
+
+.typescript-text {
+  font-weight: 2px;
+}
+
+#home-footer {
+  text-align: center;
+}
+
+// About Page //
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    'bioimage bio bio'
+    'skill1 skill2 skill3';
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+// Styling syntax for 'flaticon' icons:
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+-webkit-text-stroke: 0.3px white;
+padding-left: 2px;
+}
+
+  .skill1 {
+    grid-area: skill1;
+    h3 {
+      color: $secondary-color;
+    }
+    i {
+      color: white;
+    }
+  }
+
+  .skill2 {
+    grid-area: skill2;
+    h3 {
+      color: $secondary-color;
+    }
+    i {
+      color: white;
+    }
+  }
+
+  .skill3 {
+    grid-area: skill3;
+    h3 {
+      color: $secondary-color;
+    }
+    i {
+      color: white;
+    }
+  }
+
+  .skill {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+}
+
+// Work/Projects Page------------------------------------>
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    height: 250px;
+    width: 100%;
+    border: 3px #fff solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+// POP-UP 'MODAL' FORMATTING / STYLING FOR PROJECT INFO
+/* The Modal (background) */
+.modal, .modal2, .modal3, .modal4, .modal5 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content, .modal-content2, .modal-content3, .modal-content4, .modal-content5 {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption, #caption2, #caption3, #caption4, #caption5 {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, .modal-content2, .modal-content3, .modal-content4, .modal-content5, #caption, #caption2, #caption3, #caption4, #caption5 {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The close Button for the modal */
+.modalclose, .modalclose2, .modalclose3, .modalclose4, .modalclose5 {
+  position: absolute;
+  padding: 1em;
+  top: 35px;
+  margin-top: 6px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); 
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modalclose:hover, .modalclose:focus, .modalclose2:hover, .modalclose2:focus, .modalclose3:hover, .modalclose3:focus, .modalclose4:hover, .modalclose4:focus, .modalclose5:hover, .modalclose5:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content, .modal-content2, .modal-content3, .modal-content4, .modal-content5 {
+    width: 100%;
+  }
+}
+
+
+
+// Contact Page
+.icon-wrapper ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.icon-wrapper ul li .fa {
+  animation: pulse 5s infinite;
+  color: #D8E2DC;
+  transition: all 0.5s ease;
+}
+
+@keyframes pulse {
+  0% {
+    color: #4dc247;
+  }
+  100% {
+    color: $secondary-color;
+  }
+}
+
+
+// Contact Boxes
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}
+
+// Button Styles
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 60px;
+}
+
+@import 'mobile';
