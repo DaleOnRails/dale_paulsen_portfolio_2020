@@ -1,0 +1,1 @@
+# DalePaulsen_Portfolio_2020
