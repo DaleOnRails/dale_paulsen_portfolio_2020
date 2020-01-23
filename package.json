@@ -4,15 +4,11 @@
   "description": "Dale Paulsen 2020 Portfolio",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "start": "node index.js"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
   },
   "author": "Dale Paulsen",
   "license": "MIT",
   "dependencies": {
-    "lottie-web": "^5.6.2",
-    "node-sass": "^4.9.2",
-    "nodemon": "^2.0.2",
-    "server": "^1.0.22"
+    "node-sass": "^4.9.2"
   }
 }
