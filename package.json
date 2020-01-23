@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "Dale Paulsen 2020 Portfolio",
   "main": "index.js",
+  "homepage": "https://DaleOnRails.github.io/dale_paulsen_portfolio_2020",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Dale Paulsen",
   "license": "MIT",
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.9.2"
   }
 }
