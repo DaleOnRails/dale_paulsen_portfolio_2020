@@ -55,13 +55,30 @@
 
   .about-info {
     grid-template-areas:
-      'bioimage'
-      'bio'
-      'skill1'
-      'skill2'
-      'skill3';
+      "bioimage"
+      "bio"
+      "skill1"
+      "skill2"
+      "skill3";
 
     grid-template-columns: 1fr;
+  }
+
+  .skill1 {
+    ul {
+      list-style: none;
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      align-content: center;
+    }
+
+    .current-skills,
+    .current-tools {
+      padding-bottom: 3px;
+      list-style: none;
+      align-content: center;
+    }
   }
 
   .projects {
@@ -78,8 +95,25 @@
     }
 
     .lg-heading {
-      margin-top:1rem;
+      margin-top: 1rem;
       font-size: 5rem;
+    }
+  }
+
+  .skill1 {
+    ul {
+      list-style: none;
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      align-content: center;
+    }
+
+    .current-skills,
+    .current-tools {
+      padding-bottom: 3px;
+      list-style: none;
+      align-content: center;
     }
   }
 

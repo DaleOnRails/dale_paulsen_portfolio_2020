@@ -66,6 +66,12 @@ main {
     }
   }
 
+  .ca-link {
+      &:hover {
+        color: #fff;
+      }
+  }
+
   &#home {
     overflow: hidden;
     h1 {
@@ -105,7 +111,13 @@ main {
 
   .bio {
     grid-area: bio;
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .about-me-link {
+      &:hover {
+        color: $secondary-color;
+      }
   }
 
 // Styling syntax for 'flaticon' icons:
@@ -118,9 +130,22 @@ padding-left: 2px;
     grid-area: skill1;
     h3 {
       color: $secondary-color;
+      text-align: center;
     }
     i {
       color: white;
+    }
+    ul {
+      list-style: none;
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      align-content: center;
+    }
+    .current-skills, .current-tools {
+      padding-bottom: 3px;
+      list-style: none;
+      align-content: center;
     }
   }
 
@@ -128,9 +153,13 @@ padding-left: 2px;
     grid-area: skill2;
     h3 {
       color: $secondary-color;
+      text-align: center;
     }
     i {
       color: white;
+    }
+    .seo-skills {
+      font-size: medium;
     }
   }
 
