@@ -114,7 +114,7 @@ main {
     font-size: 1rem;
   }
 
-  .about-me-link {
+  .about-me-link, .resume-link {
       &:hover {
         color: $secondary-color;
       }
